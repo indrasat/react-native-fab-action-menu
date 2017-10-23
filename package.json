@@ -1,0 +1,33 @@
+{
+  "author": {
+    "name": "Indra Kurniawan"
+  },
+  "bugs": {
+    "url": "https://github.com/indrasat/react-native-fab-action-menu.git/issues"
+  },
+  "description": "customizable circular action menu component for react-native",
+  "homepage": "https://github.com/indrasat/react-native-fab-action-menu",
+  "keywords": [
+    "react-native",
+    "action-button",
+    "float-button",
+    "multi-action-button",
+    "circular-menu",
+    "arc-menu",
+    "satellite-menu"
+  ],
+  "license": "MIT",
+  "main": "ActionButton.js",
+  "name": "react-native-fab-action-menu",
+  "peerDependencies": {
+    "react-native": ">=0.11"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/indrasat/react-native-fab-action-menu.git"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "version": "0.4.0"
+}
