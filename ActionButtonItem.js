@@ -24,7 +24,7 @@ export default class ActionButtonItem extends Component {
               {
                 translateY: this.props.anim.interpolate({
                   inputRange: [0, 1],
-                  outputRange: [0, offsetY],
+                  outputRange: [0, offsetY/2],
                 }) },
               {
                 translateX: this.props.anim.interpolate({
