@@ -159,7 +159,7 @@ export default class ActionButton extends Component {
                             {
                                 rotate: this.state.anim.interpolate({
                                     inputRange: [0, 1],
-                                    outputRange: ['0deg', '360deg']
+                                    outputRange: ['0deg', '720deg']
                                 })
                             }
                         ]
