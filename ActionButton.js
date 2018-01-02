@@ -107,36 +107,36 @@ export default class ActionButton extends Component {
     renderButton() {
 
         return (
-                <Animated.View
-                    style={
-                        [
-                            styles.btn,
-                            {
-                                width: this.screenWidth / 2,
-                                height: this.state.anim.interpolate({
-                                    inputRange: [0, 1],
-                                    outputRange: [100, this.screenHeight*0.75]
-                                }),
-                                borderRadius: this.props.size / 2,
-                                justifyContent: 'flex-end',
-                                alignItems: 'flex-end',
-                                transform: [
-                                    {
-                                        translateY: this.state.anim.interpolate({
-                                            inputRange: [0, 1],
-                                            outputRange: [0, -(WINDOW_HEIGHT * 0.3)]  // 0 : 150, 0.5 : 75, 1 : 0
-                                        })
-                                    },
-                                    {
-                                        scale: this.state.anim.interpolate({
-                                            inputRange: [0, 1],
-                                            outputRange: [1, this.props.outRangeScale]
-                                        }),
-                                    }
-                                ]
-                            }]}>
-                    {this.renderButtonIcon()}
-                </Animated.View>
+            <Animated.View
+                style={
+                    [
+                        styles.btn,
+                        {
+                            width: this.screenWidth / 2,
+                            height: this.state.anim.interpolate({
+                                inputRange: [0, 1],
+                                outputRange: [100, this.screenHeight * 0.75]
+                            }),
+                            borderRadius: this.props.size / 2,
+                            justifyContent: 'flex-end',
+                            alignItems: 'flex-end',
+                            transform: [
+                                {
+                                    translateY: this.state.anim.interpolate({
+                                        inputRange: [0, 1],
+                                        outputRange: [0, -(WINDOW_HEIGHT * 0.5) + 75]  // 0 : 150, 0.5 : 75, 1 : 0
+                                    })
+                                },
+                                {
+                                    scale: this.state.anim.interpolate({
+                                        inputRange: [0, 1],
+                                        outputRange: [1, this.props.outRangeScale]
+                                    }),
+                                }
+                            ]
+                        }]}>
+                {this.renderButtonIcon()}
+            </Animated.View>
         );
     }
 
@@ -229,7 +229,7 @@ export default class ActionButton extends Component {
                 style={[
                     this.getActionContainerStyle(),
                     {
-                        height: this.screenHeight,
+                        height: this.screenHeight - 75,
                         justifyContent: 'center',
                     }
                 ]}>
@@ -267,7 +267,7 @@ export default class ActionButton extends Component {
                 pointerEvents="box-none"
                 style={[this.getActionContainerStyle(), {
                     width: Dimensions.get('window').width,
-                    height: (Dimensions.get('window').height - 100)
+                    height: (Dimensions.get('window').height - 75)
                 }]}
             >
                 {backdrop}
