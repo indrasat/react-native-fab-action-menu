@@ -110,6 +110,7 @@ export default class ActionButton extends Component {
             <Animated.View
                 style={
                     [
+                        pointerEvents: 'box-none',
                         styles.btn,
                         {
                             width: this.screenWidth / 2,
