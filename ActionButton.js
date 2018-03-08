@@ -66,7 +66,6 @@ export default class ActionButton extends Component {
                 }
             })
     }
-
     componentWillUnmount() {
         clearTimeout(this.timeout);
     }
